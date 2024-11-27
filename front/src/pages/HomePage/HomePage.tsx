@@ -6,17 +6,23 @@ import { fetchAttractions } from "../../services/api";
 import { AttractionType } from "../../types/AttractionType";
 import styles from "./HomePage.module.css";
 import axios from "axios";
+import {useLoaderData} from "react-router";
 //import '../../../public/db.json'
 
-const HomePage: React.FC = () => {
-  const [attractions, setAttractions] = useState<AttractionType[]>([]);
 
-  useEffect(() => {
-    axios.get('../../../public/db.json')    
-    .then(res => setAttractions(res.data))    
-    .catch(err => console.log(err))
-    console.log(attractions)
-  }, []);
+export async function loader() {
+  try {
+    const response = await axios.get('/db.json');
+    return response.data.data; // Retourne les données si la requête réussit
+  } catch (error) {
+    console.error("Erreur lors du chargement des données :", error);
+    throw new Response("Impossible de charger les données", { status: 500 });
+  }
+}
+const HomePage: React.FC = () => {
+  const [attractions, setAttractions] = useState<AttractionType[]>(useLoaderData());
+
+
 
   return (
     <div className={styles.homePage}>

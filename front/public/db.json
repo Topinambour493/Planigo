@@ -1,0 +1,202 @@
+{
+
+    "data": [
+  
+      {
+  
+        "location_id": "187147",
+  
+        "name": "Paris",
+  
+        "address_obj": {
+  
+          "city": "Île-de-France",
+  
+          "country": "France",
+  
+          "address_string": "Paris France"
+  
+        }
+  
+      },
+  
+      {
+  
+        "location_id": "11454297",
+  
+        "name": "Circuit à arrêts multiples dans Paris en « Big Bus » et croisière sur la Seine en option",
+  
+        "address_obj": {
+  
+          "city": "Paris",
+  
+          "country": "France",
+  
+          "address_string": "Paris France"
+  
+        }
+  
+      },
+  
+      {
+  
+        "location_id": "11469157",
+  
+        "name": "Paris Dîner-croisière sur la Seine by Bateaux Mouches",
+  
+        "address_obj": {
+  
+          "city": "Paris",
+  
+          "country": "France",
+  
+          "address_string": "Paris France"
+  
+        }
+  
+      },
+  
+      {
+  
+        "location_id": "11452281",
+  
+        "name": "Croisière guidée sur la Seine et options de collations par Vedettes de Paris",
+  
+        "address_obj": {
+  
+          "city": "Paris",
+  
+          "country": "France",
+  
+          "address_string": "Paris France"
+  
+        }
+  
+      },
+  
+      {
+  
+        "location_id": "11453295",
+  
+        "name": "Croisière à arrêts multiples sur la Seine à Paris",
+  
+        "address_obj": {
+  
+          "city": "Paris",
+  
+          "country": "France",
+  
+          "address_string": "Paris France"
+  
+        }
+  
+      },
+  
+      {
+  
+        "location_id": "143336",
+  
+        "name": "Paris Las Vegas",
+  
+        "address_obj": {
+  
+          "street1": "3655 S Las Vegas Blvd",
+  
+          "street2": "",
+  
+          "city": "Las Vegas",
+  
+          "state": "Nevada",
+  
+          "country": "États-Unis",
+  
+          "postalcode": "89109",
+  
+          "address_string": "3655 S Las Vegas Blvd, Las Vegas, NV 89109"
+  
+        }
+  
+      },
+  
+      {
+  
+        "location_id": "11469156",
+  
+        "name": "Paris Croisière d'1h10 sur la Seine by Bateaux Mouches",
+  
+        "address_obj": {
+  
+          "city": "Paris",
+  
+          "country": "France",
+  
+          "address_string": "Paris France"
+  
+        }
+  
+      },
+  
+      {
+  
+        "location_id": "11452714",
+  
+        "name": "Croisière touristique sur la Seine avec les Bateaux Parisiens",
+  
+        "address_obj": {
+  
+          "city": "Paris",
+  
+          "country": "France",
+  
+          "address_string": "Paris France"
+  
+        }
+  
+      },
+  
+      {
+  
+        "location_id": "11979678",
+  
+        "name": "Bateaux Parisiens Seine Dîner gastronomique et croisière touristique",
+  
+        "address_obj": {
+  
+          "city": "Paris",
+  
+          "country": "France",
+  
+          "address_string": "Paris France"
+  
+        }
+  
+      },
+  
+      {
+  
+        "location_id": "188151",
+  
+        "name": "La Tour Eiffel",
+  
+        "address_obj": {
+  
+          "street1": "Av. Gustave Eiffel",
+  
+          "street2": "",
+  
+          "city": "Paris",
+  
+          "country": "France",
+  
+          "postalcode": "75007",
+  
+          "address_string": "Av. Gustave Eiffel, 75007 Paris France"
+  
+        }
+  
+      }
+  
+    ]
+  
+  }
+   

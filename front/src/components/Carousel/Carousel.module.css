@@ -1,0 +1,11 @@
+.carousel {
+    display: flex;
+    overflow-x: scroll;
+    gap: 1rem;
+  }
+  .card {
+    min-width: 200px;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    background: #fff;
+  }

@@ -1,0 +1,5 @@
+#attraction-filter, .map{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}

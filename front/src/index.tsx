@@ -9,13 +9,18 @@ import HomePage,
   loader as productsLoader
 } from "../src/pages/HomePage/HomePage"
 import {createBrowserRouter, RouterProvider} from "react-router";
+import LandingPage from "./pages/LandingPage/LandingPage";
 
 const router = createBrowserRouter([
 {
   path: "/",
   element: <HomePage/>,
   loader: productsLoader
-}
+},
+  {
+    path: '/landing',
+    element: <LandingPage/>
+  }
 ]);
 
 const root = ReactDOM.createRoot(

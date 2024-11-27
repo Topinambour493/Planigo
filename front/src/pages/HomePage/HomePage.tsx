@@ -7,7 +7,9 @@ import { AttractionType } from "../../types/AttractionType";
 import styles from "./HomePage.module.css";
 import axios from "axios";
 import {useLoaderData} from "react-router";
+import AttractionFilters from "../../components/AttractionFilters/AttractionFilters";
 //import '../../../public/db.json'
+
 
 
 export async function loader() {
@@ -22,12 +24,11 @@ export async function loader() {
 const HomePage: React.FC = () => {
   const [attractions, setAttractions] = useState<AttractionType[]>(useLoaderData());
 
-
-
   return (
     <div className={styles.homePage}>
       <h1>Top Attractions</h1>
       <Carousel attractions={attractions.slice(0, 10)} />
+      <AttractionFilters/>
       <div className={styles.list}>
         {attractions.map((attraction) => (
           <AttractionCard key={attraction.location_id} attraction={attraction} />

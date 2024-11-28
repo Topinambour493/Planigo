@@ -1,11 +1,21 @@
 import { AttractionDetailType } from "../types/AttractionDetailType";
+import axios from "axios";
+import {AttractionType} from "../types/AttractionType";
 
-const BASE_URL = "https://api.example.com";
+const BASE_URL = "http://127.0.0.1:8000/api";
 
-export const fetchAttractions = async (country: string): Promise<AttractionDetailType[]> => {
-  const response = await fetch(`${BASE_URL}/attractions?country=${country}`);
-  if (!response.ok) {
+export const fetchAttractions = async (): Promise<AttractionType[]> => {
+  const response = await axios.get(`${BASE_URL}/attractions/`);
+  if (response.status !== 200) {
     throw new Error("Failed to fetch attractions");
   }
-  return response.json();
+  return response.data;
+};
+
+export const fetchAttraction = async (attractionId: string): Promise<AttractionDetailType> => {
+  const response = await axios.get(`${BASE_URL}/attractions/${attractionId}/`);
+  if (response.status !== 200) {
+    throw new Error("Failed to fetch attraction");
+  }
+  return response.data;
 };

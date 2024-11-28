@@ -49,7 +49,12 @@ def list_attractions(request):
     try:
         attractions = db.attractions.find()
         result = [
-            {"id": str(attraction["_id"]), "name": attraction["raw_data"].get("name", "Sans nom")}
+            {
+            "attraction_id": str(attraction["_id"]),
+            "location_id": attraction["raw_data"].get("location_id"),
+             "name": attraction["raw_data"].get("name", "Sans nom"),
+             "address_obj": attraction["raw_data"].get("address_obj", {}),
+             }
             for attraction in attractions
         ]
         return Response(result, status=status.HTTP_200_OK)

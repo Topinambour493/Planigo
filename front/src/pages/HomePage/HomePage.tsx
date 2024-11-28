@@ -1,28 +1,42 @@
-import React, { useState, useEffect } from "react";
+import React, {useEffect, useState} from "react";
 import Carousel from "../../components/Carousel/Carousel";
 import AttractionCard from "../../components/AttractionCard/AttractionCard";
-import { fetchAttractions } from "../../services/api";
-//import { AttractionDetailType } from "../../types/AttractionDetailType";
-import { AttractionType } from "../../types/AttractionType";
+import {fetchAttractions} from "../../services/api";
+import {AttractionType} from "../../types/AttractionType";
 import styles from "./HomePage.module.css";
-import axios from "axios";
 import {useLoaderData} from "react-router";
-//import '../../../public/db.json'
-
 
 export async function loader() {
   try {
-    const response = await axios.get('/db.json');
-    return response.data.data; // Retourne les données si la requête réussit
+    return await fetchAttractions(); // Return the data if the request is successful
   } catch (error) {
-    console.error("Erreur lors du chargement des données :", error);
-    throw new Response("Impossible de charger les données", { status: 500 });
+    console.error("Error loading data:", error);
+    throw new Response("Unable to load data", { status: 500 });
   }
 }
+
 const HomePage: React.FC = () => {
-  const [attractions, setAttractions] = useState<AttractionType[]>(useLoaderData());
+  const loaderData = useLoaderData() as AttractionType[] | undefined;
+  const [attractions, setAttractions] = useState<AttractionType[]>(loaderData || []);
 
+  useEffect(() => {
+    if (!loaderData) {
+      const loadAttractions = async () => {
+        try {
+          const data = await fetchAttractions();
+          setAttractions(data);
+        } catch (err) {
+          console.error("Failed to fetch attractions", err);
+        }
+      };
 
+      loadAttractions();
+    }
+  }, [loaderData]);
+
+  if (attractions.length === 0) {
+    return <div>Loading...</div>;
+  }
 
   return (
     <div className={styles.homePage}>
@@ -30,7 +44,7 @@ const HomePage: React.FC = () => {
       <Carousel attractions={attractions.slice(0, 10)} />
       <div className={styles.list}>
         {attractions.map((attraction) => (
-          <AttractionCard key={attraction.location_id} attraction={attraction} />
+          <AttractionCard key={attraction.attraction_id} attraction={attraction} />
         ))}
       </div>
     </div>

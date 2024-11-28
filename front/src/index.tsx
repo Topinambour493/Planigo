@@ -9,12 +9,20 @@ import HomePage,
   loader as productsLoader
 } from "../src/pages/HomePage/HomePage"
 import {createBrowserRouter, RouterProvider} from "react-router";
+import AttractionDetailPage,{
+  loader as productLoader
+} from '../src/pages/AttractionDetailPage/AttractionDetailPage';
 
 const router = createBrowserRouter([
 {
   path: "/",
   element: <HomePage/>,
   loader: productsLoader
+},
+{
+  path: "attraction/:id",
+  element: <AttractionDetailPage/>,
+  loader: productLoader
 }
 ]);
 

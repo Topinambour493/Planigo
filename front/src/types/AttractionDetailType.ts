@@ -1,5 +1,5 @@
 export type AttractionDetailType = {
-    location_id: number;
+    "location_id": string;
     name: string;
     description: string;
     web_url: string;
@@ -87,5 +87,4 @@ export type AttractionDetailType = {
       code: number;
     };
   };
-  
   

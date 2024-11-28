@@ -1,27 +1,27 @@
-import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import axios from "axios";
+import React from "react";
+import { useParams, useLoaderData } from "react-router-dom";
 import { AttractionDetailType } from "../../types/AttractionDetailType";
 import styles from "./AttractionDetailPage.module.css";
-import {useLoaderData} from "react-router";
+import { fetchAttraction } from "../../services/api";
+import { LoaderFunctionArgs } from "react-router-dom";
 
-export async function loader() {
+export async function loader({ params }: LoaderFunctionArgs) {
   try {
-    const response = await axios.get('/db2.json');
-    return response.data; // Retourne les données si la requête réussit
+    const attractionId = params.id as string;
+    return await fetchAttraction(attractionId);
   } catch (error) {
-    console.error("Erreur lors du chargement des données :", error);
-    throw new Response("Impossible de charger les données", { status: 500 });
+    console.error("Failed to fetch attraction", error);
+    throw new Response("Unable to load data", { status: 500 });
   }
 }
-const AttractionDetailPage: React.FC = () => {
-  const [attraction, setAttraction] = useState<AttractionDetailType>(useLoaderData());
 
+const AttractionDetailPage: React.FC = () => {
+  const attraction = useLoaderData() as AttractionDetailType;
 
   return (
     <div className={styles.detailPage}>
-      <h2>{attraction.name}</h2>
-      <p>{attraction.description}</p>
+      <h2>{attraction.raw_data.name}</h2>
+      <p>{attraction.raw_data.description}</p>
     </div>
   );
 };

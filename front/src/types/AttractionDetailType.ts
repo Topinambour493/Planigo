@@ -1,5 +1,7 @@
 export type AttractionDetailType = {
-    "location_id": string;
+  id: string;
+  raw_data: {
+    attraction_id: string;
     name: string;
     description: string;
     web_url: string;
@@ -87,4 +89,8 @@ export type AttractionDetailType = {
       code: number;
     };
   };
-  
+  images: Array<{
+    raw_data: any;
+    created_at: string | null;
+  }>;
+};

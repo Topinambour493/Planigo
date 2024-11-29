@@ -17,6 +17,7 @@ import LandingPage,{
   loader as landingPageLoader
 } from '../src/pages/LandingPage/LandingPage';
 
+
 const router = createBrowserRouter([
 {
   path: "/",

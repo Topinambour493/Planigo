@@ -47,8 +47,8 @@ const LandingPage: React.FC = () => {
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
     console.log(`Profile Type: ${profileType}, Country: ${country}`);
-    localStorage.setItem("profileType", profileType);
-    localStorage.setItem("country", country);
+    sessionStorage.setItem("profileType", profileType);
+    sessionStorage.setItem("country", country);
     sessionStorage.setItem("userSession", JSON.stringify({ profileType, country }));
     navigate("/home");
   };

@@ -11,10 +11,6 @@ const Carousel: React.FC<CarouselProps> = ({ attractions }) => {
     <div className={styles.carousel}>
       {attractions.map((attraction) => (
         <div key={attraction.location_id} className={styles.card}>
-          <img
-            //src={attraction.rating_image_url || "/placeholder.png"}
-            alt={attraction.name}
-          />
           <h3>{attraction.name}</h3>
           {/* <p>{attraction.description}</p> */}
         </div>

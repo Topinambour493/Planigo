@@ -56,8 +56,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'attraction',
     'user',
-    'corsheaders',
-    'django_extensions',
+    'corsheaders'
 ]
 
 MIDDLEWARE = [

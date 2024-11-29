@@ -46,7 +46,7 @@ export const fetchAttraction =async (locationId: string): Promise<AttractionDeta
   if (response.status !== 200) {
     throw new Error("Failed to fetch attractions");
   }
-  return response.data.data;
+  return response.data;
 }
 
 // export const fetchAttraction = async (attractionId: string): Promise<AttractionDetailType> => {

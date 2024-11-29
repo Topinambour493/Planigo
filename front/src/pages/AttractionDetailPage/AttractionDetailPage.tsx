@@ -20,8 +20,8 @@ const AttractionDetailPage: React.FC = () => {
 
   return (
     <div className={styles.detailPage}>
-      <h2>{attraction.raw_data.name}</h2>
-      <p>{attraction.raw_data.description}</p>
+      <h2>{attraction.name}</h2>
+      <p>{attraction.description}</p>
     </div>
   );
 };

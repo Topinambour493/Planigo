@@ -1,21 +1,18 @@
 # Django
-django>=4.2,<5.0
 
+django>=4.2,<5.0
 # MongoDB
 pymongo[srv,tls]>=4.5.0
 mongoengine>=0.24.2
-
 # REST Framework
 djangorestframework>=3.14,<4.0
-
 # Drf-yasg for API documentation (optional but useful)
 drf-yasg>=1.21.6,<2.0
-
 # CORS for cross-origin requests (if needed)
 django-cors-headers>=3.14.0
-
 # dotenv for environment variable management
 python-dotenv>=1.0.0
-
 # Additional tools (if required)
 pytz>=2023.3
+# HTTP library
+requests>=2.31.0

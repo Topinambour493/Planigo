@@ -44,7 +44,7 @@ const HomePage: React.FC = () => {
       <Carousel attractions={attractions.slice(0, 10)} />
       <div className={styles.list}>
         {attractions.map((attraction) => (
-          <AttractionCard key={attraction.attraction_id} attraction={attraction} />
+          <AttractionCard key={attraction.location_id} attraction={attraction} />
         ))}
       </div>
     </div>

@@ -1,6 +1,6 @@
 export type AttractionType={
     
-        "attraction_id": string,
+        "location_id": string,
         "name": string,
         "address_obj": {
           "street1": string,

@@ -13,9 +13,18 @@ import AttractionDetailPage,{
   loader as productLoader
 } from '../src/pages/AttractionDetailPage/AttractionDetailPage';
 
+import LandingPage,{
+  loader as landingPageLoader
+} from '../src/pages/LandingPage/LandingPage';
+
 const router = createBrowserRouter([
 {
   path: "/",
+  element: <LandingPage/>,
+  loader: landingPageLoader
+},
+{
+  path: "/home",
   element: <HomePage/>,
   loader: productsLoader
 },

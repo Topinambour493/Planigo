@@ -1,0 +1,24 @@
+.detailPage {
+    padding: 2rem;
+    background: #f9f9f9;
+  }
+  
+  .detailPage h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .detailPage p {
+    margin: 0.5rem 0;
+  }
+  
+  .detailPage a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  .photos img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+  

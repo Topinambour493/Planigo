@@ -1,0 +1,39 @@
+{
+    "location_id": "187147",
+    "name": "Paris",
+    "description": "Déguster un pain au chocolat à la terrasse d'un café, se délasser après une journée de balade sur les quais de la Seine, s'émerveiller devant des lieux symboliques comme la Tour Eiffel ou l'Arc de triomphe… Un séjour à Paris réussi conjugue activités et détente, tout en prenant le temps de savourer un bon repas tout comme les célèbres expositions du Louvre. Commencez par prendre des forces à Notre-Dame, puis partez à la chasse aux bonnes affaires au marché aux puces de Montreuil ou goûtez aux spécialités vendues au marché biologique de Raspail et pour terminer votre journée en beauté, couronnez le tout par un spectacle osé au Moulin Rouge.",
+    "web_url": "https://www.tripadvisor.fr/Tourism-g187147-Paris_Ile_de_France-Vacations.html?m=66827",
+    "address_obj": {
+      "city": "Île-de-France",
+      "country": "France",
+      "address_string": "Paris France"
+    },
+    "ancestors": [
+      {
+        "level": "Region",
+        "name": "Île-de-France",
+        "location_id": "187144"
+      },
+      {
+        "level": "Country",
+        "name": "France",
+        "location_id": "187070"
+      }
+    ],
+    "latitude": "48.857037",
+    "longitude": "2.349401",
+    "timezone": "Europe/Paris",
+    "see_all_photos": "https://www.tripadvisor.fr/Tourism-g187147-m66827-Paris_Ile_de_France-Vacations.html#photos",
+    "category": {
+      "name": "geographic",
+      "localized_name": "Emplacement géographique"
+    },
+    "subcategory": [
+      {
+        "name": "city",
+        "localized_name": "Ville"
+      }
+    ],
+    "neighborhood_info": [],
+    "awards": []
+  }

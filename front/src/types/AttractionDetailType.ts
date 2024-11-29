@@ -1,7 +1,7 @@
 export type AttractionDetailType = {
   id: string;
   raw_data: {
-    attraction_id: string;
+    location_id: string;
     name: string;
     description: string;
     web_url: string;

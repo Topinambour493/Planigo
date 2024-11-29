@@ -7,10 +7,12 @@ import env from "react-dotenv";
 const BASE_URL = "http://127.0.0.1:8000/api";
 
 export const fetchAttractions = async (): Promise<AttractionType[]> => {
+  let city = sessionStorage.getItem("city")
+  let country = sessionStorage.getItem("country")
   const response = await axios.get("/api/v1/location/search", {
     params : {
       language: "fr", // Langue
-      searchQuery: "Paris",
+      searchQuery: `${city} ${country}`,
       key: env.TRIPADVISOR_API_KEY
     },
     headers: {
@@ -32,6 +34,7 @@ export const fetchAttractionsFavorite = async (): Promise<AttractionType[]> => {
   return response.data;
 };
 
+
 export const fetchAttraction =async (locationId: string): Promise<AttractionDetailType> => {
   const response = await axios.get("/api/v1/location/"+locationId+"/details", {
     params : {
@@ -48,6 +51,8 @@ export const fetchAttraction =async (locationId: string): Promise<AttractionDeta
   }
   return response.data;
 }
+
+
 
 // export const fetchAttraction = async (attractionId: string): Promise<AttractionDetailType> => {
 //   const response = await axios.get(`${BASE_URL}/attractions/${attractionId}/`);
